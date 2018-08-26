@@ -1,0 +1,37 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+getRecords:
+    path: /getRecords
+    controller: AppBundle\Controller\UserController::list
+
+user_list:
+    path: /user
+    controller: AppBundle\Controller\UserController::list
+    methods: [GET, HEAD]
+
+user_add:
+    path: /user
+    controller: AppBundle\Controller\UserController::add
+    methods: [POST]
+
+user_show:
+    path: /user/{id}
+    controller: AppBundle\Controller\UserController::show
+    methods: [GET]
+
+user_edit:
+    path: /user/{id}
+    controller: AppBundle\Controller\UserController::edit
+    methods: [PATCH]
+
+user_delete:
+    path: /user/{id}
+    controller: AppBundle\Controller\UserController::delete
+    methods: [DELETE]
+
+user_login:
+    path: /user/login
+    controller: AppBundle\Controller\UserController::login
+    methods: [POST]
